@@ -4,139 +4,69 @@
     "tx": {
         "continuations": [],
         "contract": {
-            "timeout": 1687380161001,
+            "timeout": 1000000100000002,
             "timeout_continuation": "close",
             "when": [
                 {
                     "case": {
-                        "deposits": {
-                            "multiply": {
-                                "use_value": "margin_ada"
-                            },
-                            "times": 1000000
-                        },
-                        "into_account": {
-                            "address": "addr_test1vrudhk63pclytll6vdt6hrda75al5a2jhtlkuqn0mh89ngsr929vf"
-                        },
-                        "of_token": {
-                            "currency_symbol": "",
-                            "token_name": ""
-                        },
-                        "party": {
-                            "address": "addr_test1vrudhk63pclytll6vdt6hrda75al5a2jhtlkuqn0mh89ngsr929vf"
+                        "choose_between": [
+                            {
+                                "from": 0,
+                                "to": 1000000
+                            }
+                        ],
+                        "for_choice": {
+                            "choice_name": "WOLF_BTCADA",
+                            "choice_owner": {
+                                "address": "addr_test1vrxx3rjangevudlrejgp9m508uc26jd02n7lmdz365n4wrca35y5j"
+                            }
                         }
                     },
                     "then": {
-                        "timeout": 1687380761000,
-                        "timeout_continuation": {
-                            "timeout": 1687440761000,
-                            "timeout_continuation": "close",
-                            "when": [
-                                {
-                                    "case": {
-                                        "choose_between": [
-                                            {
-                                                "from": 0,
-                                                "to": 1000000
-                                            }
-                                        ],
-                                        "for_choice": {
+                        "else": {
+                            "from_account": {
+                                "address": "addr_test1vrudhk63pclytll6vdt6hrda75al5a2jhtlkuqn0mh89ngsr929vf"
+                            },
+                            "pay": {
+                                "multiply": 1000000,
+                                "times": {
+                                    "minus": 1000,
+                                    "value": {
+                                        "value_of_choice": {
                                             "choice_name": "WOLF_BTCADA",
                                             "choice_owner": {
                                                 "address": "addr_test1vrxx3rjangevudlrejgp9m508uc26jd02n7lmdz365n4wrca35y5j"
                                             }
                                         }
-                                    },
-                                    "then": {
-                                        "be": {
-                                            "value_of_choice": {
-                                                "choice_name": "WOLF_BTCADA",
-                                                "choice_owner": {
-                                                    "address": "addr_test1vrxx3rjangevudlrejgp9m508uc26jd02n7lmdz365n4wrca35y5j"
-                                                }
-                                            }
-                                        },
-                                        "let": "market_ada",
-                                        "then": {
-                                            "be": {
-                                                "multiply": {
-                                                    "use_value": "notional_btc"
-                                                },
-                                                "times": {
-                                                    "minus": {
-                                                        "use_value": "strike_ada"
-                                                    },
-                                                    "value": {
-                                                        "use_value": "market_ada"
-                                                    }
-                                                }
-                                            },
-                                            "let": "value_ada",
-                                            "then": {
-                                                "be": {
-                                                    "minus": {
-                                                        "use_value": "premium_ada"
-                                                    },
-                                                    "value": {
-                                                        "use_value": "value_ada"
-                                                    }
-                                                },
-                                                "let": "alice_profit",
-                                                "then": {
-                                                    "else": {
-                                                        "from_account": {
-                                                            "address": "addr_test1vrudhk63pclytll6vdt6hrda75al5a2jhtlkuqn0mh89ngsr929vf"
-                                                        },
-                                                        "pay": {
-                                                            "multiply": {
-                                                                "use_value": "value_ada"
-                                                            },
-                                                            "times": 1000000
-                                                        },
-                                                        "then": "close",
-                                                        "to": {
-                                                            "account": {
-                                                                "address": "addr_test1vrc79wasc0na5zglchugujuevu9ra9ehfjxwl4x9stgm9uc9dpguq"
-                                                            }
-                                                        },
-                                                        "token": {
-                                                            "currency_symbol": "",
-                                                            "token_name": ""
-                                                        }
-                                                    },
-                                                    "if": {
-                                                        "le_than": 0,
-                                                        "value": {
-                                                            "use_value": "value_ada"
-                                                        }
-                                                    },
-                                                    "then": "close"
-                                                }
-                                            }
-                                        }
                                     }
                                 }
-                            ]
+                            },
+                            "then": "close",
+                            "to": {
+                                "account": {
+                                    "address": "addr_test1vrc79wasc0na5zglchugujuevu9ra9ehfjxwl4x9stgm9uc9dpguq"
+                                }
+                            },
+                            "token": {
+                                "currency_symbol": "",
+                                "token_name": ""
+                            }
                         },
-                        "when": [
-                            {
-                                "case": {
-                                    "choose_between": [
-                                        {
-                                            "from": 0,
-                                            "to": 0
-                                        }
-                                    ],
-                                    "for_choice": {
-                                        "choice_name": "DO NOT ENTER, SKIP TO NEXT TIMEOUT INSTEAD",
+                        "if": {
+                            "le_than": 0,
+                            "value": {
+                                "minus": 1000,
+                                "value": {
+                                    "value_of_choice": {
+                                        "choice_name": "WOLF_BTCADA",
                                         "choice_owner": {
                                             "address": "addr_test1vrxx3rjangevudlrejgp9m508uc26jd02n7lmdz365n4wrca35y5j"
                                         }
                                     }
-                                },
-                                "then": "close"
+                                }
                             }
-                        ]
+                        },
+                        "then": "close"
                     }
                 }
             ]
@@ -144,7 +74,7 @@
         "inputs": [
             {
                 "input_from_party": {
-                    "address": "addr_test1vrc79wasc0na5zglchugujuevu9ra9ehfjxwl4x9stgm9uc9dpguq"
+                    "address": "addr_test1vrudhk63pclytll6vdt6hrda75al5a2jhtlkuqn0mh89ngsr929vf"
                 },
                 "into_account": {
                     "address": "addr_test1vrudhk63pclytll6vdt6hrda75al5a2jhtlkuqn0mh89ngsr929vf"
@@ -153,7 +83,7 @@
                     "currency_symbol": "",
                     "token_name": ""
                 },
-                "that_deposits": 100000000
+                "that_deposits": 300000000
             }
         ],
         "marloweValidator": {
@@ -173,8 +103,8 @@
         },
         "payments": [],
         "range": [
-            20723575,
-            20723695
+            20732337,
+            20732697
         ],
         "roles": {
             "unCurrencySymbol": ""
@@ -222,33 +152,12 @@
                             "token_name": ""
                         }
                     ],
-                    300000000
+                    0
                 ]
             ],
-            "boundValues": [
-                [
-                    "strike_ada",
-                    1000
-                ],
-                [
-                    "premium_ada",
-                    100
-                ],
-                [
-                    "notional_btc",
-                    2
-                ],
-                [
-                    "threshold",
-                    1050
-                ],
-                [
-                    "margin_ada",
-                    300
-                ]
-            ],
+            "boundValues": [],
             "choices": [],
-            "minTime": 1687379575000
+            "minTime": 1687388337000
         }
     }
 }
