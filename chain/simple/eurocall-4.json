@@ -32,6 +32,21 @@
         },
         "payments": [
             {
+                "amount": 100000000,
+                "payment_from": {
+                    "address": "addr_test1vrc79wasc0na5zglchugujuevu9ra9ehfjxwl4x9stgm9uc9dpguq"
+                },
+                "to": {
+                    "account": {
+                        "address": "addr_test1vrudhk63pclytll6vdt6hrda75al5a2jhtlkuqn0mh89ngsr929vf"
+                    }
+                },
+                "token": {
+                    "currency_symbol": "",
+                    "token_name": ""
+                }
+            },
+            {
                 "amount": 400000000,
                 "payment_from": {
                     "address": "addr_test1vrudhk63pclytll6vdt6hrda75al5a2jhtlkuqn0mh89ngsr929vf"
@@ -63,8 +78,8 @@
             }
         ],
         "range": [
-            20732774,
-            20733134
+            20735241,
+            20735601
         ],
         "roles": {
             "unCurrencySymbol": ""
@@ -102,7 +117,7 @@
                     30200
                 ]
             ],
-            "minTime": 1687388774000
+            "minTime": 1687391241000
         }
     }
 }

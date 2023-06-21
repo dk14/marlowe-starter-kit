@@ -23,13 +23,43 @@
                         }
                     },
                     "then": {
-                        "else": {
-                            "from_account": {
-                                "address": "addr_test1vrudhk63pclytll6vdt6hrda75al5a2jhtlkuqn0mh89ngsr929vf"
+                        "from_account": {
+                            "address": "addr_test1vrc79wasc0na5zglchugujuevu9ra9ehfjxwl4x9stgm9uc9dpguq"
+                        },
+                        "pay": 100000000,
+                        "then": {
+                            "else": {
+                                "from_account": {
+                                    "address": "addr_test1vrudhk63pclytll6vdt6hrda75al5a2jhtlkuqn0mh89ngsr929vf"
+                                },
+                                "pay": {
+                                    "multiply": 1000000,
+                                    "times": {
+                                        "minus": 1000,
+                                        "value": {
+                                            "value_of_choice": {
+                                                "choice_name": "WOLF_BTCADA",
+                                                "choice_owner": {
+                                                    "address": "addr_test1vrxx3rjangevudlrejgp9m508uc26jd02n7lmdz365n4wrca35y5j"
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                "then": "close",
+                                "to": {
+                                    "account": {
+                                        "address": "addr_test1vrc79wasc0na5zglchugujuevu9ra9ehfjxwl4x9stgm9uc9dpguq"
+                                    }
+                                },
+                                "token": {
+                                    "currency_symbol": "",
+                                    "token_name": ""
+                                }
                             },
-                            "pay": {
-                                "multiply": 1000000,
-                                "times": {
+                            "if": {
+                                "le_than": 0,
+                                "value": {
                                     "minus": 1000,
                                     "value": {
                                         "value_of_choice": {
@@ -41,32 +71,17 @@
                                     }
                                 }
                             },
-                            "then": "close",
-                            "to": {
-                                "account": {
-                                    "address": "addr_test1vrc79wasc0na5zglchugujuevu9ra9ehfjxwl4x9stgm9uc9dpguq"
-                                }
-                            },
-                            "token": {
-                                "currency_symbol": "",
-                                "token_name": ""
+                            "then": "close"
+                        },
+                        "to": {
+                            "account": {
+                                "address": "addr_test1vrudhk63pclytll6vdt6hrda75al5a2jhtlkuqn0mh89ngsr929vf"
                             }
                         },
-                        "if": {
-                            "le_than": 0,
-                            "value": {
-                                "minus": 1000,
-                                "value": {
-                                    "value_of_choice": {
-                                        "choice_name": "WOLF_BTCADA",
-                                        "choice_owner": {
-                                            "address": "addr_test1vrxx3rjangevudlrejgp9m508uc26jd02n7lmdz365n4wrca35y5j"
-                                        }
-                                    }
-                                }
-                            }
-                        },
-                        "then": "close"
+                        "token": {
+                            "currency_symbol": "",
+                            "token_name": ""
+                        }
                     }
                 }
             ]
@@ -103,8 +118,8 @@
         },
         "payments": [],
         "range": [
-            20732773,
-            20733133
+            20735240,
+            20735600
         ],
         "roles": {
             "unCurrencySymbol": ""
@@ -140,7 +155,7 @@
                             "token_name": ""
                         }
                     ],
-                    400000000
+                    300000000
                 ],
                 [
                     [
@@ -152,12 +167,12 @@
                             "token_name": ""
                         }
                     ],
-                    0
+                    100000000
                 ]
             ],
             "boundValues": [],
             "choices": [],
-            "minTime": 1687388773000
+            "minTime": 1687391240000
         }
     }
 }
