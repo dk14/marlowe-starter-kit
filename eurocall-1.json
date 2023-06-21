@@ -31,7 +31,7 @@
                             "be": 300,
                             "let": "margin_ada",
                             "then": {
-                                "timeout": 1687373910000,
+                                "timeout": 1687374600000,
                                 "timeout_continuation": "close",
                                 "when": [
                                     {
@@ -54,7 +54,7 @@
                                             }
                                         },
                                         "then": {
-                                            "timeout": 1687373910001,
+                                            "timeout": 1687374600001,
                                             "timeout_continuation": "close",
                                             "when": [
                                                 {
@@ -77,9 +77,9 @@
                                                         }
                                                     },
                                                     "then": {
-                                                        "timeout": 1687374210000,
+                                                        "timeout": 1687375200000,
                                                         "timeout_continuation": {
-                                                            "timeout": 1687375110000,
+                                                            "timeout": 1687435200000,
                                                             "timeout_continuation": "close",
                                                             "when": [
                                                                 {
