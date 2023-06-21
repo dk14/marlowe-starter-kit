@@ -4,7 +4,7 @@
     "tx": {
         "continuations": [],
         "contract": {
-            "timeout": 1687373910001,
+            "timeout": 1687375004001,
             "timeout_continuation": "close",
             "when": [
                 {
@@ -27,9 +27,9 @@
                         }
                     },
                     "then": {
-                        "timeout": 1687374210000,
+                        "timeout": 1687375604000,
                         "timeout_continuation": {
-                            "timeout": 1687375110000,
+                            "timeout": 1687435604000,
                             "timeout_continuation": "close",
                             "when": [
                                 {
@@ -173,8 +173,8 @@
         },
         "payments": [],
         "range": [
-            20717509,
-            20717629
+            20718402,
+            20718522
         ],
         "roles": {
             "unCurrencySymbol": ""
@@ -248,7 +248,7 @@
                 ]
             ],
             "choices": [],
-            "minTime": 1687373509000
+            "minTime": 1687374402000
         }
     }
 }
