@@ -17,6 +17,7 @@ https://github.com/input-output-hk/marlowe-cardano/pull/608
 - [Lessons](#lessons)
     - [0. Preliminaries](00-preliminaries.md) and [demonstration of setting up keys and addresses (video) (6:17)](https://youtu.be/hGBmj9ZrYHs)
     - [1. Simple Wolfram Oracle](11-wolfram.ipynb)
+    - [1. European Call example](22-eurocall.ipynb)
         
 - [Additional Information](#additional-information)
     - [Overview of Marlowe Tools](#marlowe-tools)
