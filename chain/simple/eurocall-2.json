@@ -139,8 +139,8 @@
         },
         "payments": [],
         "range": [
-            20735447,
-            20735807
+            20736869,
+            20737229
         ],
         "roles": {
             "unCurrencySymbol": ""
@@ -193,7 +193,7 @@
             ],
             "boundValues": [],
             "choices": [],
-            "minTime": 1687391447000
+            "minTime": 1687392869000
         }
     }
 }
